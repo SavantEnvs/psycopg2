@@ -1,0 +1,10 @@
+project: savantenvs/psycopg2
+target: fuzz_typecast
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_typecast/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_typecast
+    libfuzzer: true
+    max_length: 4096
+    timeout: 5

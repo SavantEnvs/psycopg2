@@ -1,0 +1,10 @@
+project: savantenvs/psycopg2
+target: fuzz_adapt
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_adapt/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_adapt
+    libfuzzer: true
+    max_length: 4096
+    timeout: 5

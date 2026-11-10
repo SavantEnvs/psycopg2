@@ -1,0 +1,1 @@
+postgresql://u:pw@host:5432/db?sslmode=require&application_name=x
